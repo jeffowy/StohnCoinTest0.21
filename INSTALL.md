@@ -1,5 +1,5 @@
-Building Stohn
+Building STOHN
 ================
 
 See doc/build-*.md for instructions on building the various
-elements of the Stohn Core reference implementation of Stohn.
+elements of the STOHN Core reference implementation of STOHN.

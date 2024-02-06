@@ -1,15 +1,15 @@
-Stohn Core
+STOHN Core
 =============
 
 Setup
 ---------------------
-Stohn Core is the original Stohn client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Stohn transactions, which requires approximately 22 gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+STOHN Core is the original STOHN client and it builds the backbone of the network. It downloads and, by default, stores the entire history of STOHN transactions, which requires approximately 22 gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Stohn Core, visit [stohn.org](https://stohn.org/).
+To download STOHN Core, visit [stohn.org](https://stohncoin.org/).
 
 Running
 ---------------------
-The following are some helpful notes on how to run Stohn Core on your native platform.
+The following are some helpful notes on how to run STOHN Core on your native platform.
 
 ### Unix
 
@@ -24,18 +24,17 @@ Unpack the files into a directory, and then run stohn-qt.exe.
 
 ### macOS
 
-Drag Stohn Core to your applications folder, and then run Stohn Core.
+Drag STOHN Core to your applications folder, and then run STOHN Core.
 
 ### Need Help?
 
-* See the documentation at the [Stohn Wiki](https://stohn.info/)
-for help and more information.
-* Ask for help on [#stohn](http://webchat.freenode.net?channels=stohn) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=stohn).
-* Ask for help on the [StohnTalk](https://stohntalk.io/) forums, in the [Technical Support section](https://stohntalk.io/c/technical-support).
+* See the documentation at the [STOHN Wiki](https://stohn.info/) for help and more information.
+* Ask for help on [#stohn](https://webchat.freenode.net/#stohn) on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#stohn).
+* Ask for help on the [STOHNTalk](https://stohntalk.io/) forums, in the [Technical Support board](https://stohntalk.io/c/technical-support).
 
 Building
 ---------------------
-The following are developer notes on how to build Stohn Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build STOHN Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [macOS Build Notes](build-osx.md)
@@ -48,12 +47,13 @@ The following are developer notes on how to build Stohn Core on your native plat
 
 Development
 ---------------------
-The Stohn repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The STOHN repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Productivity Notes](productivity.md)
 - [Release Notes](release-notes.md)
 - [Release Process](release-process.md)
+- [Source Code Documentation (External Link)](https://doxygen.bitcoincore.org/)
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [JSON-RPC Interface](JSON-RPC-interface.md)
@@ -64,14 +64,15 @@ The Stohn repo's [root README](/README.md) contains relevant information on the 
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [StohnTalk](https://stohntalk.io/) forums.
-* Discuss general Stohn development on #stohn-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=stohn-dev.
+* Discuss on the [STOHNTalk](https://stohntalk.io/) forums.
+* Discuss general STOHN development on #stohn-dev on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#stohn-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
 - [bitcoin.conf Configuration File](bitcoin-conf.md)
 - [Files](files.md)
 - [Fuzz-testing](fuzzing.md)
+- [Reduce Memory](reduce-memory.md)
 - [Reduce Traffic](reduce-traffic.md)
 - [Tor Support](tor.md)
 - [Init Scripts (systemd/upstart/openrc)](init.md)
@@ -81,5 +82,3 @@ The Stohn repo's [root README](/README.md) contains relevant information on the 
 License
 ---------------------
 Distributed under the [MIT software license](/COPYING).
-This product includes software developed by the OpenSSL Project for use in the [OpenSSL Toolkit](https://www.openssl.org/). This product includes
-cryptographic software written by Eric Young ([eay@cryptsoft.com](mailto:eay@cryptsoft.com)), and UPnP software written by Thomas Bernard.

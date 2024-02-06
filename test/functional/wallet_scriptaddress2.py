@@ -4,14 +4,11 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #
-# Test new Stohn multisig prefix functionality.
+# Test new STOHN multisig prefix functionality.
 #
 
 from test_framework.test_framework import BitcoinTestFramework
-from test_framework.util import (
-    assert_equal,
-    connect_nodes,
-)
+from test_framework.util import assert_equal
 
 class ScriptAddress2Test(BitcoinTestFramework):
     def set_test_params(self):
@@ -21,8 +18,8 @@ class ScriptAddress2Test(BitcoinTestFramework):
 
     def setup_network(self, split=False):
         self.setup_nodes()
-        connect_nodes(self.nodes[1], 0)
-        connect_nodes(self.nodes[2], 0)
+        self.connect_nodes(1, 0)
+        self.connect_nodes(2, 0)
         self.sync_all()
 
     def skip_test_if_missing_module(self):
@@ -41,7 +38,7 @@ class ScriptAddress2Test(BitcoinTestFramework):
         addr2 = self.nodes[0].getnewaddress()
 
         multisig_addr = self.nodes[0].addmultisigaddress(2, [addr, addr2], "multisigaccount")['address']
-        assert_equal(multisig_addr[0], 'T')
+        assert_equal(multisig_addr[0], 'Q')
 
         # Send to a new multisig address
         txid = self.nodes[1].sendtoaddress(multisig_addr, 1)
@@ -63,7 +60,7 @@ class ScriptAddress2Test(BitcoinTestFramework):
         # Send to an old multisig address. The api addmultisigaddress
         # can only generate a new address so we manually compute
         # multisig_addr_old beforehand using an old client.
-        priv_keys = ["cU7eeLPKzXeKMeZvnEJhvZZ3tLqVF3XGeo1BbM8dnbmV7pP3Tg89",
+        priv_keys = ["cU7eeLPKzXeKMeZvnEJhvZZ3tLqVF3XGeo1BbM8dnbmV7pP3Qg89",
                      "cTw7mRhSvTfzqCt6MFgBoTBqwBpYu2rWugisXcwjv4cAASh3iqPt"]
 
         addrs = ["mj6gNGRXPXrD69R5ApjcsDerZGrYKSfb6v",
@@ -73,8 +70,8 @@ class ScriptAddress2Test(BitcoinTestFramework):
         self.nodes[0].importprivkey(priv_keys[1])
 
         multisig_addr_new = self.nodes[0].addmultisigaddress(2, addrs, "multisigaccount2")['address']
-        assert_equal(multisig_addr_new, 'TZ974ZrPrmqMmm1PSVp4m8YEgo3bCTZBbe')
-        multisig_addr_old = "2N5nLwYz9qfnGdaFLpPn3gS6oYTbmLTWPjq"
+        assert_equal(multisig_addr_new, 'QZ974ZrPrmqMmm1PSVp4m8YEgo3bCQZBbe')
+        multisig_addr_old = "2N5nLwYz9qfnGdaFLpPn3gS6oYQbmLTWPjq"
 
         # Let's send to the old address. We can then find it in the
         # new address with the new client. So basically the old
