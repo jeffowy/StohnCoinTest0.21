@@ -10,9 +10,9 @@ packages:
 - "xorriso"
 - "python3-pip"
 remotes:
-- "url": "https://github.com/StohnIO/Stohncoin-detached-sigs.git"
+- "url": "https://github.com/StohnCoin-Projects/stohn-detached-sigs"
   "dir": "signature"
-- "url": "https://github.com/achow101/signapple.git"
+- "url": "https://github.com/achow101/signapple.git" 
   "dir": "signapple"
   "commit": "0777ce58e61b0e6be753a5f524149d6d47905186"
 files:

@@ -32,8 +32,8 @@ packages:
 - "binutils-riscv64-linux-gnu"
 - "g++-8-riscv64-linux-gnu"
 remotes:
-- "url": "https://github.com/StohnIO/Stohncoin.git"
-  "dir": "stohn"
+- "url": "https://github.com/StohnCoin-Projects/StohnCoin"
+  "dir": "StohnCoin"
 files: []
 script: |
   set -e -o pipefail
@@ -92,7 +92,7 @@ script: |
   create_per-host_faketime_wrappers "2000-01-01 12:00:00"
   export PATH=${WRAP_DIR}:${PATH}
 
-  cd stohn
+  cd StohnCoin
   BASEPREFIX="${PWD}/depends"
   # Build dependencies for each host
   for i in $HOSTS; do
