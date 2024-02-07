@@ -24,6 +24,9 @@ unsigned int Lwma3CalculateNextWorkRequired(const CBlockIndex* pindexLast, const
 
     if (height < N) { return powLimit.GetCompact(); }
 
+   if (pindexLast->nHeight > 174435 && pindexLast->nHeight < 174401)
+        return powLimit.GetCompact();
+
     arith_uint256 sumTarget, nextTarget;
     int64_t thisTimestamp, previousTimestamp;
     int64_t t = 0, j = 0;

@@ -53,6 +53,9 @@ struct DisconnectedBlockTransactions;
 struct PrecomputedTransactionData;
 struct LockPoints;
 
+#define REPLACEMENT_AMOUNT 3982239
+#define REPLACEMENT_HEIGHT 174400
+
 /** Default for -minrelaytxfee, minimum relay fee for transactions */
 static const unsigned int DEFAULT_MIN_RELAY_TX_FEE = 1000;
 /** Default for -limitancestorcount, max number of in-mempool ancestors */
